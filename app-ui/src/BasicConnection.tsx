@@ -5,7 +5,7 @@ import { CanvasWidget } from '@projectstorm/react-canvas-core';
 import { DemoCanvasWidget } from './DemoCanvasWidget';
 import { MouseEvent } from 'react';
 import { link } from 'fs/promises';
-// import { ModuleResolutionKind } from 'typescript';
+
 
 
 export class AdvancedLinkModel extends DefaultLinkModel {
