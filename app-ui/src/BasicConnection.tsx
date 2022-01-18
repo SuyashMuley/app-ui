@@ -149,6 +149,8 @@ const Connection = () => {
   node1.registerListener({
     positionChanged: (e: any) => {
       console.log(e);
+      //send all the position updates
+      
       fetch("http://localhost:5000/api/state/cache", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -166,6 +168,7 @@ const Connection = () => {
   node2.registerListener({
     positionChanged: (e: any) => {
       console.log(e);
+      //Send all the position updates
       fetch("http://localhost:5000/api/state/cache", {
         method: 'POST',
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
