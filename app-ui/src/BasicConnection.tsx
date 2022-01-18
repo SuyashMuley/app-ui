@@ -12,9 +12,6 @@ import * as React from "react";
 import { CanvasWidget } from "@projectstorm/react-canvas-core";
 import { DemoCanvasWidget } from "./DemoCanvasWidget";
 import { MouseEvent } from "react";
-import { link } from "fs/promises";
-
-// import { ModuleResolutionKind } from 'typescript';
 
 export class AdvancedLinkModel extends DefaultLinkModel {
   constructor() {
@@ -150,7 +147,7 @@ const Connection = () => {
     positionChanged: (e: any) => {
       console.log(e);
       //send all the position updates
-      
+
       fetch("http://localhost:5000/api/state/cache", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
